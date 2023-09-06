@@ -1,0 +1,10 @@
+<!-- myapp/templates/myapp/product_list.html -->
+<h1>Product List</h1>
+<ul>
+    {% for MyModel in MyModels %}
+        {{MyModel}}
+        <li>{{ MyModel.end_year }} - ${{ MyModel.url }}</li>
+    {% empty %}
+        <li>No products available.</li>
+    {% endfor %}
+</ul>

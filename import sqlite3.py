@@ -1,11 +1,11 @@
 import sqlite3
 import json
 
-f=open('C:\\Users\\Ravi\\Documents\\GitHub\\Dart\\Fluttter\\Chapter 5\\Login App\\login_app\\lib\\ui\\data.json','r', encoding='utf-8')
+f=open('data.json','r', encoding='utf-8')
 data=json.load(f)
 
 # Connect to the database (a new file will be created if it doesn't exist)
-conn = sqlite3.connect('mydatabase.db')
+conn = sqlite3.connect('db.sqlite3')
 
 # Create a cursor object to execute SQL commands
 cursor = conn.cursor()
@@ -67,3 +67,4 @@ for row in rows:
 
 conn.commit()
 conn.close()
+
