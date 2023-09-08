@@ -2,7 +2,7 @@
 <h1>Product List</h1>
 <ul>
     {% for MyModel in MyModels %}
-        {{MyModel}}
+        {{MyModel.objects.all}}
         <li>{{ MyModel.end_year }} - ${{ MyModel.url }}</li>
     {% empty %}
         <li>No products available.</li>

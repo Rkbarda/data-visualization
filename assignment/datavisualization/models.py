@@ -20,4 +20,3 @@ class MyModel(models.Model):
     source = models.TextField(blank=True, null=True)
     title = models.TextField(blank=True, null=True)
     likelihood = models.IntegerField(blank=True, null=True)
-    print(MyModel.objects.all)
